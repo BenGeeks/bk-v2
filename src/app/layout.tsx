@@ -1,6 +1,6 @@
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { SessionProvider } from "@/context/session-context";
 import { Geist, Geist_Mono } from "next/font/google";
+import { authOptions } from "@/lib/auth-options";
 import { getServerSession } from "next-auth";
 import type { Metadata } from "next";
 import "./globals.css";
