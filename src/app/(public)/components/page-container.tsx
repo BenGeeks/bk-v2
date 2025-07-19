@@ -8,9 +8,8 @@ interface Props {
 
 const PageContainer = ({ title, imgUrl, children }: Props) => {
   return (
-    <div className="flex-1 overflow-y-auto">
-      {/* Content container */}
-      <div className="mx-auto max-w-7xl px-4 py-6 bg-white">
+    <main className="flex flex-1 overflow-y-auto bg-amber-50">
+      <div className="flex flex-1 flex-col mx-auto max-w-7xl px-4 py-6 bg-white">
         <h1 className="text-3xl font-bold mb-4">{title}</h1>
 
         {imgUrl && (
@@ -21,7 +20,7 @@ const PageContainer = ({ title, imgUrl, children }: Props) => {
 
         <div>{children}</div>
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -1,16 +1,15 @@
-import { authOptions } from "@/lib/auth-options";
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
+import { redirect } from 'next/navigation';
 
-import Login from "./login";
+import Login from './login';
+import { getUser } from '@/lib/user';
 
 const LoginPage = async () => {
-  const session = await getServerSession(authOptions);
+   const user = await getUser();
 
-  if (session) {
-    redirect("/dashboard");
-  }
-  return <Login />;
+   if (user) {
+      redirect('/dashboard');
+   }
+   return <Login />;
 };
 
 export default LoginPage;

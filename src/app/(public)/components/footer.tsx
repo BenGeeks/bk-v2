@@ -6,11 +6,9 @@ const PublicFooter: React.FC = () => {
   return (
     <footer className="sticky bottom-0 bg-gray-100 text-gray-500 text-xs">
       <div className="mx-auto max-w-7xl flex items-center justify-center p-2">
-        {/* Copyright */}
         <p>© {new Date().getFullYear()} Bebeng&apos;s Kitchen</p>
         <span className="mx-2">|</span>
 
-        {/* Links */}
         <nav className="flex items-center space-x-4">
           {navLinks.map((link, index) => (
             <React.Fragment key={link.href}>
