@@ -5,7 +5,7 @@ const HomePage = async () => {
    const user = await getUser();
 
    if (user) {
-      redirect('/dashboard');
+      redirect('/app/orders/today');
    } else {
       redirect('/home');
    }
